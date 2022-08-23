@@ -10,6 +10,15 @@ public class SpeakerServiceImpl implements SpeakerService {
 
     private SpeakerRepository repository ;
 
+    public  SpeakerServiceImpl(){
+        System.out.println("SpeakerServiceImpl No arg constuctor");
+
+    }
+    public  SpeakerServiceImpl(SpeakerRepository repository) {
+        System.out.println("SpeakerServiceImpl repository constuctor");
+        this.repository = repository;
+    }
+
     public List<Speaker> findAll() {
         return repository.findAll();
     }

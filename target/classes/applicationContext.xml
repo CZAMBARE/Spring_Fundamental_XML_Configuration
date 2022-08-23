@@ -9,7 +9,8 @@
     </bean>
 
     <bean name="speakerService" class="com.pluralsight.service.SpeakerServiceImpl" >
-        <property name="speakerRepository" ref="speakerRepository"></property>
+        <!--property name="speakerRepository" ref="speakerRepository"></property  (Setter Injection Method)  -->
+        <constructor-arg index="0" ref="speakerRepository"></constructor-arg>
     </bean>
 
 </beans>
