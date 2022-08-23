@@ -8,9 +8,10 @@
           class="com.pluralsight.repository.HibernateSpeakerRepositoryImpl" >
     </bean>
 
-    <bean name="speakerService" class="com.pluralsight.service.SpeakerServiceImpl" >
+    <bean name="speakerService" class="com.pluralsight.service.SpeakerServiceImpl" autowire="byName">
         <!--property name="speakerRepository" ref="speakerRepository"></property  (Setter Injection Method)  -->
-        <constructor-arg index="0" ref="speakerRepository"></constructor-arg>
+        <!--constructor-arg index="0" ref="speakerRepository"></constructor-arg -->
+
     </bean>
 
 </beans>
